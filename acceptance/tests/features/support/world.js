@@ -1,9 +1,21 @@
+var zombie = require('zombie');
+var assert = require('assert');
+
 var World = function (callback) {
-    // set up code goes here
 
+    this.browser = new zombie();
 
+    this.visitMoneySupermarket = function(callback) {
+        this.browser.visit("http://www.moneysupermarket.com")
+            .then(function() {
+                assert.equal(this.browser.text("title"), "MoneySuperMarket - Helping You Make The Most Of Your Money");
+            });
+    };
 
-    // last line to tell cucumber.js the World is ready.
+    this.clickOnCarInsurance = function(callback) {
+
+    }
+
     callback(this);
 };
 

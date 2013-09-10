@@ -12,3 +12,7 @@ Feature: This is an example feature
     Given a variable set to 2
     When I increment the variable by 3
     Then the variable should contain 5
+
+  Scenario: navigating money supermarket
+    Given I am on MoneySupermarket
+    When I click on car insurance
