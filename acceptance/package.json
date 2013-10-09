@@ -2,9 +2,6 @@
   "devDependencies": {
     "assert": "0.4.9",
     "cucumber": "~0.3.1",
-    "cuke-tree": "~0.2.16",
-    "grunt": "~0.4.1",
-    "grunt-cuke-tree": "~0.1.4",
     "optimist": "~0.4.0",
     "selenium-webdriver": "~2.35.1",
     "zombie": "~2.0.0-alpha21"
