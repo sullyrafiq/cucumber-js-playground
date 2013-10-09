@@ -1,3 +1,5 @@
+.gradle/
+.idea/
 cucumber.iml
 cucumber.ipr
 cucumber.iws
