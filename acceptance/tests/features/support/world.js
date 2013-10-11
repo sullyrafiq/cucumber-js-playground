@@ -1,7 +1,11 @@
 var zombie = require('zombie');
 var assert = require('assert');
 
+var PagesWorld = require('./pages.js').pagesWorld;
+
 var World = function World(callback) {
+
+    this.pages = new PagesWorld();
 
     this.browser = new zombie({runScripts: true, debug: true});
 
@@ -13,9 +17,8 @@ var World = function World(callback) {
         this.browser.clickLink("#house-mainnav-car-insurance", callback);
     };
 
-    this.thePageTitleIs = function(title, callback) {
+    this.thePageTitleIs = function(title) {
         assert.equal(this.browser.text("title"), title);
-        callback();
     };
 
     callback();

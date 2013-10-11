@@ -1,6 +1,5 @@
-var assert = require('assert');
-
 var myStepDefinitionsWrapper = function () {
+
     this.World = require("../support/world.js").World;
 
     this.Given(/^I am on the MoneySupermarket home page$/, function(callback) {
@@ -12,7 +11,9 @@ var myStepDefinitionsWrapper = function () {
     });
 
     this.Then(/^the title should be "([^"]*)"$/, function(title, callback) {
-        this.thePageTitleIs(title, callback);
+        this.thePageTitleIs(title);
+        this.pages.sayHello();
+        callback();
     });
 };
 
