@@ -1,15 +1,13 @@
 var zombie = require('zombie');
+var World = function World(callback) {
 
-var WorldConstructor = function WorldConstructor(callback) {
-    this.browser = new zombie({runScripts: true, debug: true});
+    this.browser = new zombie();
 
-    var world = {
-        visit: function(url, callback) {
-            this.browser.visit(url, callback);
-        }
+    this.visit = function(url, callback) {
+        this.browser.visit(url, callback);
     };
 
-    callback(world);
+    callback();
 };
 
-exports.World = WorldConstructor;
+exports.World = World;
