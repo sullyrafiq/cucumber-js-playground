@@ -1,8 +1,7 @@
-Feature: This is an example feature
-  In order to learn Cucumber
-  As a developer
-  I want to make this feature pass
+Feature: Example feature
+  As a user of cucumber.js
+  I want to have documentation on cucumber
+  So that I can concentrate on building awesome applications
 
-  Scenario: navigating money supermarket
-    Given I am on MoneySupermarket
-    When I click on car insurance
+  Scenario: Reading documentation
+    Given I am on the Cucumber.js Github repository

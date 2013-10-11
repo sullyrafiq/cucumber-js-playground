@@ -1,15 +1,11 @@
-var myStepDefinitions = function () {
+// features/step_definitions/myStepDefinitions.js
+
+var myStepDefinitionsWrapper = function () {
     this.World = require("../support/world.js").World;
 
-    this.Given(/^I am on MoneySupermarket/, function (next) {
-        this.visitMoneySupermarket();
-        next();
-    });
-
-    this.When(/^I click on car insurance/, function (next) {
-        this.clickOnCarInsurance();
-        next();
+    this.Given(/^I am on the Cucumber.js Github repository$/, function(callback) {
+        this.visit('http://github.com/cucumber/cucumber-js', callback);
     });
 };
 
-module.exports = myStepDefinitions;
+module.exports = myStepDefinitionsWrapper;
