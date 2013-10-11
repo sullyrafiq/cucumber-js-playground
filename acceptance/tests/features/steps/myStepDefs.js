@@ -1,10 +1,18 @@
-// features/step_definitions/myStepDefinitions.js
+var assert = require('assert');
 
 var myStepDefinitionsWrapper = function () {
     this.World = require("../support/world.js").World;
 
-    this.Given(/^I am on the Cucumber.js Github repository$/, function(callback) {
-        this.visit('http://github.com/cucumber/cucumber-js', callback);
+    this.Given(/^I am on the MoneySupermarket home page$/, function(callback) {
+        this.visitMoneySupermarket(callback);
+    });
+
+    this.When(/^I select car insurance$/, function(callback) {
+        this.clickOnCarInsuranceLink(callback);
+    });
+
+    this.Then(/^the title should be "([^"]*)"$/, function(title, callback) {
+        this.thePageTitleIs(title, callback);
     });
 };
 
