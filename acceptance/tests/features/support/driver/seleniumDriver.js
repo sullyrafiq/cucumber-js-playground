@@ -1,6 +1,4 @@
-var driver = function(world) {
-    this.browser = world.browser;
-};
+var driver = function() {};
 
 driver.prototype.visit = function(url, callback) {
     console.log("Visiting " + url);

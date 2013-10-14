@@ -10,15 +10,16 @@ var myHooks = function () {
         var browser = new WebDriver.Builder()
             .usingServer("http://127.0.0.1:4444/wd/hub")
             .withCapabilities({
-                'browserName': 'phantomjs'/*,
-                 'acceptSslCerts': true,
-                 'phantomjs.cli.args': ['--ignore-ssl-errors=true', '--ssl-protocol=any']*/
+                'browserName': 'phantomjs',
+                'acceptSslCerts': true,
+                'phantomjs.cli.args': ['--ignore-ssl-errors=true', '--ssl-protocol=any']
             }).build();
+
         browser.By = WebDriver.By;
 
         browser.getSession().then(
             function (session) {
-                world.browser = browser;
+                world.driver.browser = browser;
                 callback();
             },
             function (err) {

@@ -5,7 +5,7 @@ var World = function World(callback) {
 
     console.log("Creating the world...");
 
-    this.driver = new Driver(this);
+    this.driver = new Driver();
     this.homePage = new HomePage(this.driver);
 
     callback();
