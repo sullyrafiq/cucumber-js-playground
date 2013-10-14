@@ -1,4 +1,3 @@
-var zombie = require('zombie');
 var assert = require('assert');
 
 var homePage = function(driver) {
@@ -13,7 +12,7 @@ homePage.prototype.clickOnCarInsuranceLink = function(callback) {
     this.driver.clickLink("#house-mainnav-car-insurance", callback);
 };
 
-homePage.prototype.thePageTitleIs = function(title) {
+homePage.prototype.assertThePageTitleIs = function(title) {
     assert.equal(this.driver.getPageTitle(), title);
 };
 

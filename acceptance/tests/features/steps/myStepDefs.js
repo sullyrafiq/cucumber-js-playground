@@ -11,7 +11,7 @@ var myStepDefinitionsWrapper = function () {
     });
 
     this.Then(/^the title should be "([^"]*)"$/, function(title, callback) {
-        this.homePage.thePageTitleIs(title);
+        this.homePage.assertThePageTitleIs(title);
         callback();
     });
 };
