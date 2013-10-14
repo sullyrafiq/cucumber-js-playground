@@ -1,6 +1,6 @@
 var zombie = require('zombie');
 
-var driver = function(world) {
+var driver = function() {
     this.browser = new zombie({runScripts: true, debug: true});
 };
 

@@ -14,7 +14,7 @@ pages.prototype.clickOnCarInsuranceLink = function(callback) {
 };
 
 pages.prototype.thePageTitleIs = function(title) {
-    assert.equal(this.driver.getPageTitle());
+    assert.equal(this.driver.getPageTitle(), title);
 };
 
 exports.pages = pages;
