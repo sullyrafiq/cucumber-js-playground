@@ -1,10 +1,10 @@
-var Pages = require('./pages.js').pages;
-var Driver = require('./driver.js').driver;
+var HomePage = require('./pages/homePage.js').homePage;
+var Driver = require('./driver/zombieDriver.js').driver;
 
 var World = function World(callback) {
 
     this.driver = new Driver();
-    this.pages = new Pages(this.driver);
+    this.homePage = new HomePage(this.driver);
 
     callback();
 };
