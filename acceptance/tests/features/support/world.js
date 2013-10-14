@@ -1,8 +1,8 @@
-var PagesWorld = require('./pages.js').pagesWorld;
+var Pages = require('./pages.js').pages;
 
 var World = function World(callback) {
 
-    this.pages = new PagesWorld();
+    this.pages = new Pages();
 
     callback();
 };
