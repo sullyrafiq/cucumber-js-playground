@@ -9,10 +9,10 @@ driver.prototype.visit = function(url, callback) {
         });
 };
 
-driver.prototype.clickLink = function(selector, callback) {
+driver.prototype.clickWithId = function(selector, callback) {
     console.log("Clicking link with id " + selector);
 
-    this.browser.findElement(this.webDriver.By.id(selector)).click()
+    this.browser.findElement(this.browser.By.id(selector)).click()
         .then(function() {
             callback();
         });

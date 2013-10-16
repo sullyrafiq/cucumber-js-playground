@@ -3,7 +3,7 @@ var WebDriver = require('selenium-webdriver');
 var myHooks = function () {
 
     this.Before(function(callback) {
-        console.log("Setting stuff up for tests");
+        console.log("Starting up the selenium driver");
 
         var world = this;
 
@@ -19,6 +19,7 @@ var myHooks = function () {
 
         browser.getSession().then(
             function (session) {
+                console.log("Successfully created selenium session");
                 world.driver.browser = browser;
                 callback();
             },
@@ -30,12 +31,12 @@ var myHooks = function () {
     });
 
     this.After(function(callback) {
-        console.log("Tearing stuff down");
+        console.log("Tearing down selenium driver");
 
         var world = this;
 
-        if (world.browser) {
-            world.browser.quit().then(callback, function (err) {
+        if (world.driver.browser) {
+            world.driver.browser.quit().then(callback, function (err) {
                 console.error(err);
                 callback.fail({message: "Error closing browser", error: err});
             });

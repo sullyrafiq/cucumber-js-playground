@@ -1,5 +1,5 @@
-var HomePage = require('./pages/homePage.js').homePage;
-var Driver = require('./driver/seleniumDriver.js').driver;
+var HomePage = require('./pages/home.js').homePage;
+var Driver = require('./driver/selenium.js').driver;
 
 var World = function World(callback) {
 

@@ -9,7 +9,7 @@ homePage.prototype.visitMoneySupermarket = function(callback) {
 };
 
 homePage.prototype.clickOnCarInsuranceLink = function(callback) {
-    this.driver.clickLink("#house-mainnav-car-insurance", callback);
+    this.driver.clickWithId("house-mainnav-car-insurance", callback);
 };
 
 homePage.prototype.assertThePageTitleIs = function(title) {
